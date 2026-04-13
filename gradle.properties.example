@@ -1,0 +1,15 @@
+# Copie este arquivo para ~/.gradle/gradle.properties e preencha os valores reais.
+# NUNCA commite o arquivo com valores reais.
+
+# ── Sonatype Central (central.sonatype.com) ───────────────────────────────────
+# Gere o token em: central.sonatype.com → Account → Generate User Token
+ossrh.username=SEU_TOKEN_USER
+ossrh.password=SEU_TOKEN_PASSWORD
+
+# ── Assinatura GPG ────────────────────────────────────────────────────────────
+# Exporte a chave privada com:
+#   gpg --export-secret-keys --armor SEU_EMAIL | pbcopy
+# Cole o conteúdo completo (incluindo o cabeçalho BEGIN/END) como uma única linha
+# usando \n para separar as linhas.
+signing.key=-----BEGIN PGP PRIVATE KEY BLOCK-----\n...\n-----END PGP PRIVATE KEY BLOCK-----
+signing.password=SENHA_DA_CHAVE_GPG

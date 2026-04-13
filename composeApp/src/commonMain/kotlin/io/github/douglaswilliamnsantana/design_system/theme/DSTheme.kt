@@ -1,4 +1,4 @@
-package io.github.douglassantana.design_system.theme
+package io.github.douglaswilliamnsantana.design_system.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -6,13 +6,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
-import io.github.douglassantana.design_system.foundations.DSShapes
-import io.github.douglassantana.design_system.foundations.colors.DSDarkColorScheme
-import io.github.douglassantana.design_system.foundations.colors.DSLightColorScheme
-import io.github.douglassantana.design_system.foundations.tokens.DSElevation
-import io.github.douglassantana.design_system.foundations.tokens.DSRadius
-import io.github.douglassantana.design_system.foundations.tokens.DSSpacing
-import io.github.douglassantana.design_system.foundations.tokens.DSTypography
+import io.github.douglaswilliamnsantana.design_system.foundations.DSShapes
+import io.github.douglaswilliamnsantana.design_system.foundations.colors.DSDarkColorScheme
+import io.github.douglaswilliamnsantana.design_system.foundations.colors.DSLightColorScheme
+import io.github.douglaswilliamnsantana.design_system.foundations.tokens.DSElevation
+import io.github.douglaswilliamnsantana.design_system.foundations.tokens.DSRadius
+import io.github.douglaswilliamnsantana.design_system.foundations.tokens.DSSpacing
+import io.github.douglaswilliamnsantana.design_system.foundations.tokens.DSTypography
 
 data class DSSpacingTokens(
     val none: androidx.compose.ui.unit.Dp = DSSpacing.none,

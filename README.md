@@ -8,7 +8,7 @@ Add the dependency to your `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("io.github.douglassantana:design-system:1.0.0")
+    implementation("io.github.douglaswilliamnsantana:design-system:1.0.0")
 }
 ```
 

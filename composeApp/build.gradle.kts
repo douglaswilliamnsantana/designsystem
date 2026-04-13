@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.github.douglaswilliamnsantana"
-version = "1.0.0"
+version = "1.0.1"
 
 kotlin {
     androidTarget {
@@ -72,7 +72,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
 
-    coordinates("io.github.douglaswilliamnsantana", "design-system", "1.0.0")
+    coordinates("io.github.douglaswilliamnsantana", "design-system", "1.0.1")
 
     pom {
         name.set("DS Design System")

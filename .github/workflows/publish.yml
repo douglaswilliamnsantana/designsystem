@@ -28,7 +28,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Publish to Maven Central
-        run: ./gradlew :composeApp:publishAllPublicationsToMavenCentralRepository -x kmpPartiallyResolvedDependenciesChecker --no-configuration-cache
+        run: ./gradlew :composeApp:publishAllPublicationsToMavenCentralRepository -x kmpPartiallyResolvedDependenciesChecker --no-configuration-cache --stacktrace 2>&1 | tail -100
         env:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.OSSRH_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.OSSRH_PASSWORD }}

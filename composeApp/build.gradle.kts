@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.mavenPublish)
 }
 
-group = "com.douglassantana"
+group = "io.github.douglassantana"
 version = "1.0.0"
 
 kotlin {
@@ -49,7 +49,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.douglassantana.design_system"
+    namespace = "io.github.douglassantana.design_system"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -72,7 +72,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
 
-    coordinates("com.douglassantana", "design-system", "1.0.0")
+    coordinates("io.github.douglassantana", "design-system", "1.0.0")
 
     pom {
         name.set("DS Design System")

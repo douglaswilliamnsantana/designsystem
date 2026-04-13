@@ -1,8 +1,8 @@
-package com.douglassantana.design_system.foundations
+package io.github.douglassantana.design_system.foundations
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes
-import com.douglassantana.design_system.foundations.tokens.DSRadius
+import io.github.douglassantana.design_system.foundations.tokens.DSRadius
 
 val DSShapes = Shapes(
     extraSmall = RoundedCornerShape(size = DSRadius.xs),

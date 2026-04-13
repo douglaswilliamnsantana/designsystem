@@ -1,4 +1,4 @@
-package com.douglassantana.design_system.foundations.tokens
+package io.github.douglassantana.design_system.foundations.tokens
 
 import androidx.compose.ui.unit.dp
 

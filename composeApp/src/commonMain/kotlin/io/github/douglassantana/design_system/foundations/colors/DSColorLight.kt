@@ -1,4 +1,4 @@
-package com.douglassantana.design_system.foundations.colors
+package io.github.douglassantana.design_system.foundations.colors
 
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color

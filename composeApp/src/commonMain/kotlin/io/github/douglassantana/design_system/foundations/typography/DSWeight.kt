@@ -1,4 +1,4 @@
-package com.douglassantana.design_system.foundations.typography
+package io.github.douglassantana.design_system.foundations.typography
 
 import androidx.compose.ui.text.font.FontWeight
 

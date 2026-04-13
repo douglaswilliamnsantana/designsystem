@@ -1,3 +1,4 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -5,8 +6,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
-    id("maven-publish")
-    id("signing")
+    alias(libs.plugins.mavenPublish)
 }
 
 group = "com.douglassantana"
@@ -68,51 +68,36 @@ android {
     }
 }
 
-publishing {
-    publications.withType<MavenPublication> {
-        artifactId = artifactId.replace("composeapp", "design-system")
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    signAllPublications()
 
-        pom {
-            name.set("DS Design System")
-            description.set("Design system Kotlin Multiplatform (Android + iOS) com Compose Multiplatform")
-            url.set("https://github.com/douglassantana/designsystem")
+    coordinates("com.douglassantana", "design-system", "1.0.0")
 
-            licenses {
-                license {
-                    name.set("MIT License")
-                    url.set("https://opensource.org/licenses/MIT")
-                }
-            }
+    pom {
+        name.set("DS Design System")
+        description.set("Design system Kotlin Multiplatform (Android + iOS) com Compose Multiplatform")
+        url.set("https://github.com/douglassantana/designsystem")
 
-            developers {
-                developer {
-                    id.set("douglassantana")
-                    name.set("Douglas Santana")
-                }
-            }
-
-            scm {
-                connection.set("scm:git:github.com/douglassantana/designsystem.git")
-                developerConnection.set("scm:git:ssh://github.com/douglassantana/designsystem.git")
-                url.set("https://github.com/douglassantana/designsystem")
+        licenses {
+            license {
+                name.set("MIT License")
+                url.set("https://opensource.org/licenses/MIT")
             }
         }
-    }
 
-    repositories {
-        mavenLocal()
-    }
-}
+        developers {
+            developer {
+                id.set("douglassantana")
+                name.set("Douglas Santana")
+            }
+        }
 
-signing {
-    val signingKey = providers.environmentVariable("SIGNING_KEY").orNull
-        ?: providers.gradleProperty("signing.key").orNull
-    val signingPassword = providers.environmentVariable("SIGNING_PASSWORD").orNull
-        ?: providers.gradleProperty("signing.password").orNull
-
-    if (signingKey != null && signingPassword != null) {
-        useInMemoryPgpKeys(signingKey, signingPassword)
-        sign(publishing.publications)
+        scm {
+            connection.set("scm:git:github.com/douglassantana/designsystem.git")
+            developerConnection.set("scm:git:ssh://github.com/douglassantana/designsystem.git")
+            url.set("https://github.com/douglassantana/designsystem")
+        }
     }
 }
 
